@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aishwarya Chakravarthy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var mode;
+        try {
+          mode = localStorage.getItem("dark-mode-toggle");
+        } catch (e) {}
+        if (mode === "dark") root.classList.add("dark");
+        else if (
+          mode !== "light" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        )
+          root.classList.add("dark");
+      })();
+    </script>
+  </head>
+  <body>
+    <aside class="theme-toggle-wrap" aria-label="Theme">
+      <dark-mode-toggle
+        id="dark-mode-toggle"
+        appearance="toggle"
+        permanent
+      ></dark-mode-toggle>
+    </aside>
+    <div id="stars" class="stars" aria-hidden="true"></div>
+    <div class="ground" aria-hidden="true">
+      <svg
+        viewBox="0 0 1440 160"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0,160 L1440,160 L1440,98 Q720,42 0,98 Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+    <canvas id="bg"></canvas>
+    <div id="zzz" class="zzz" aria-hidden="true">
+      <span>z</span><span>z</span><span>z</span>
+    </div>
+    <div class="content">
+      <h1>
+        <span class="greet">hey! i'm</span>
+        <span class="name">aishwarya.</span
+        ><span class="cursor" aria-hidden="true"></span>
+      </h1>
+      <!-- <p class="sub">i'm a software engineer @ blank</p> -->
+      <div class="about">
+        <p class="about-label">some info about me:</p>
+        <ul>
+          <li>bs + ms in computer science from georgia tech </li>
+          <li>concentrations in ml and theory</li>
+          <li>previous swe internships @ notion, plaid, duolingo, & reu @ mit haystack observatory</li>
+          <li>ta'd for data structures and algorithms (cs 1332), design and analysis of algorithms (cs 3510), and advanced algorithms (cs 4540) at gt</li>
+          <li>
+            created
+            <a
+              href="https://workspace.google.com/marketplace/app/wordflow/851135867974"
+              target="_blank"
+              rel="noopener noreferrer"
+              >wordflow</a
+            > ↗, a social ai writing assistant for google docs, presented as an
+            <a
+              href="https://arxiv.org/abs/2401.14447"
+              target="_blank"
+              rel="noopener noreferrer"
+              >acl 2024 demo paper</a
+            >
+            ↗
+          </li>
+          <li>
+            2024 kp fellow,
+            gt college of computing outstanding freshman leadership award
+          </li>
+        </ul>
+      </div>
+      <div class="links">
+        <a href="mailto:aishwarya.chakravarthy26@gmail.com">email ↗</a>
+        <a href="https://www.linkedin.com/in/achakrav6/" target="_blank"
+          >linkedin ↗</a
+        >
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
