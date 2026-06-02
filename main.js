@@ -6,6 +6,7 @@ import { createSparkleTrail } from "./sparkles.js";
 import { createBloomableRose} from "./lathe-rose.js";
 import { createGarden } from "./garden.js";
 
+// Scene setup
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(
